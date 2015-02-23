@@ -88,6 +88,7 @@ const BoardPresenter = Lang.Class({
                 return this._mergeRow(second, rest[0], rest.slice(1));
             }
         }
+        return undefined;
     },
 
     addRandomTile: function () {
