@@ -1,0 +1,8 @@
+#!/bin/bash
+for test in $(ls tests/twentyfortyeight/*.js); do
+    gjs -I twentyfortyeight -I tests/jasmine tests/jasmine/eos-jasmine-run $test
+    if ! [ $? -eq 0 ]; then
+        echo FAILURE
+        exit 1
+    fi
+done
