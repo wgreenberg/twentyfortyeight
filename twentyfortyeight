@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gjs -I src src/main.js
