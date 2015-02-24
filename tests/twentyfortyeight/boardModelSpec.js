@@ -99,11 +99,11 @@ describe('BoardModel', function () {
     });
 
     it('should return a list of unused row/col pairs', function () {
-        expect(board.empty.length).toEqual(16);
+        expect(board.unusedTiles.length).toEqual(16);
         let topLeftTile = "I'm in the top left!";
         board.add(topLeftTile, 2, 3);
-        expect(board.empty.length).toEqual(15);
-        expect(board.empty).not.toContain({
+        expect(board.unusedTiles.length).toEqual(15);
+        expect(board.unusedTiles).not.toContain({
             row: 2,
             col: 3,
         });

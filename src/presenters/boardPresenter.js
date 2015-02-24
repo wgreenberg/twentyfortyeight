@@ -92,7 +92,7 @@ const BoardPresenter = Lang.Class({
     },
 
     addRandomTile: function () {
-        let unusedTiles = this.model.empty;
+        let unusedTiles = this.model.unusedTiles;
         if (unusedTiles.length === 0)
             return;
         let randomIndex = GLib.random_int_range(0, unusedTiles.length);

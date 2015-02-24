@@ -24,7 +24,7 @@ const BoardModel = Lang.Class({
         this._tiles = {};
     },
 
-    get empty () {
+    get unusedTiles () {
         let usedTiles = Object.keys(this._tiles);
         let unusedTiles = [];
         for (let i = 0; i < NUM_ROWS; i++) {
