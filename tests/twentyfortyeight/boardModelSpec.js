@@ -34,9 +34,7 @@ describe('BoardModel', function () {
     });
 
     it('should complain if removed tile does not exist', function () {
-        expect(() => {
-            board.remove(1, 1);
-        }).toThrow();
+        expect(() => board.remove(1, 1)).toThrow();
     });
 
     it('should have a clear function', function () {
@@ -64,9 +62,7 @@ describe('BoardModel', function () {
     it('should not allow tiles to be overwritten', function () {
         let mockTile = "I'm a tile!";
         board.add(mockTile, 1, 1);
-        expect(() => {
-            board.add(mockTile, 1, 1);
-        }).toThrow();
+        expect(() => board.add(mockTile, 1, 1)).toThrow();
     });
 
     it('should perform board rotations', function () {
