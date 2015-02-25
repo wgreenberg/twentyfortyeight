@@ -38,20 +38,4 @@ const BoardView = Lang.Class({
             this._grid[tile.row][tile.col].value = tile.tile.value;
         });
     },
-
-    vfunc_get_request_mode: function () {
-        return Gtk.SizeRequestMode.CONSTANT_SIZE;
-    },
-
-    vfunc_get_preferred_width: function () {
-        let spacing = this.column_spacing * (NUM_COLS - 1);
-        let size = spacing + TileView.TILE_WIDTH * NUM_COLS;
-        return [size, size];
-    },
-
-    vfunc_get_preferred_height: function () {
-        let spacing = this.row_spacing * (NUM_ROWS - 1);
-        let size = spacing + TileView.TILE_HEIGHT * NUM_ROWS;
-        return [size, size];
-    },
 });
