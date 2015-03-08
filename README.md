@@ -1,5 +1,5 @@
 # twentyfortyeight
-A TDD kata in GJS
+A simple implementation of 2048 in GJS.
 
 Requires:
  * gjs
